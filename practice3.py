@@ -1,9 +1,7 @@
-size = int(input("size of diamond : "))
+line = int(input("다이아몬드 상부 줄 수 : "))
 
-#상부다이아
-for upper_diamond in range(1, size*2, 2): #1, 3, 5, 7, 9
-    print((" " * ((size*2 - 1 - upper_diamond // 2)) + ("*"*upper_diamond)))
+for x in range(1, line):
+    print(" " * (line - x) + "*" * (2 * x - 1))
 
-#하부다이아
-for lower_diamond in range(size*2-3, 0, -2):
-    print((" " * ((size*2 - 1 - lower_diamond // 2)) + ("*"*lower_diamond)))
+for y in range(line, 0, -1):
+    print(" " * (line - y) + "*" * (2 * y - 1))5
